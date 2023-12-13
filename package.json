@@ -1,0 +1,31 @@
+{
+  "name": "4380asmsyntax",
+  "displayName": "4380ASMSyntax",
+  "description": "Syntax highlighter for ASM syntax",
+  "version": "0.0.1",
+  "publisher": "Wy-G",
+  "icon": "Ninja.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "4380-ASM",
+        "extensions": [
+          ".asm"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "4380-ASM",
+        "scopeName": "source.asm",
+        "path": "./syntaxes/asm.tmLanguage.json"
+      }
+    ]
+  }
+}

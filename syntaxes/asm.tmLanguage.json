@@ -1,0 +1,42 @@
+{
+  "name": "4380-ASM",
+  "scopeName": "source.asm",
+  "fileTypes": ["4380-ASM"],
+  "patterns": [
+    {
+      "name": "keyword.control.assembly",
+      "match": "(?i)\\b(ADD|SUB|MUL|DIV|ADDI|MULI|DIVI|SDIV|AND|OR|CMP|CMPI|JMP|JMR|BNZ|BGT|BLT|BRZ|MOVI|LDA|ISTR|ILDR|ISTB|ILDB|MOV|STR|LDR|STB|LDB|ALCI|ALLC|IALLC|PSHR|PSHB|POPR|POPB|CALL|RET|TRP)\\b"
+    },
+    {
+      "name": "variable.register.assembly",
+      "match": "(?i)\\b(R[0-9]|R1[0-5]|PC|SL|SB|SP|FP|HP)\\b"
+    },
+    {
+      "name": "constant.numeric.assembly",
+      "match": "#\\b\\d+\\b"
+    },
+    {
+      "name": "string.quoted.assembly",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "constant.numeric.assembly",
+      "begin": "'",
+      "end": "'"
+    },
+    {
+      "name": "comment.assembly",
+      "match": ";.*$"
+    },
+    {
+      "name": "storage.type.assembly",
+      "match": "^(?!\\s)([A-Za-z_][A-Za-z0-9_]*)\\b(?=\\s|$|\\.)"
+    },
+    {
+      "name": "entity.name.type.class.directive.assembly",
+      "match": "\\.(INT|BYT|BTS|STR)"
+    }
+  ],
+  "repository": {}
+}
